@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff3df" />
+  <title>Happy Birthday Khushi 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="confetti" aria-hidden="true"></div>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">K ✦ 21</div>
+      <button id="musicToggle" class="icon-btn" aria-label="Toggle birthday music">♫</button>
+    </header>
+
+    <main>
+      <section class="chapter active" id="intro">
+        <div class="gift-wrap">
+          <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div><div class="sparkle s3">✦</div>
+          <div class="gift" id="gift" role="button" tabindex="0" aria-label="Open birthday gift">
+            <div class="lid"><span>FOR KHUSHI</span></div>
+            <div class="box"></div><div class="ribbon-v"></div><div class="ribbon-h"></div>
+          </div>
+          <p class="eyebrow">A tiny internet-sized present</p>
+          <h1>Someone made you a gift.</h1>
+          <p class="sub">And yes, it is actually from your annoying brother.</p>
+          <button class="primary" id="openGift">Open the gift →</button>
+        </div>
+      </section>
+
+      <section class="chapter" id="timeline">
+        <div class="chapter-head"><span>01 / THE TIMELINE</span><h2>Somehow, we made it here.</h2><p>A very serious historical record of two siblings.</p></div>
+        <div class="timeline">
+          <article class="time-card"><b>2005</b><h3>Khushi was born 👶</h3><p>The main character entered the world.</p></article>
+          <article class="time-card offset"><b>2007</b><h3>Then I arrived.</h3><p>For reasons nobody fully understands.</p></article>
+          <article class="time-card"><b>2010 → 2019</b><h3>Same school.</h3><p>Years of classes, chaos, arguments and probably way too much sibling nonsense.</p></article>
+          <article class="time-card offset"><b>2019</b><h3>Different schools.</h3><p>And the sibling timeline took its first big turn.</p></article>
+          <article class="time-card"><b>2023</b><h3>Different hostels.</h3><p>You went to college. I went to school. Suddenly life got properly busy.</p></article>
+          <article class="time-card offset final"><b>2026</b><h3>Here we areee.</h3><p>Still siblings. Still annoying each other. Still somehow a team.</p></article>
+        </div>
+        <button class="primary next" data-next="archive">Continue →</button>
+      </section>
+
+      <section class="chapter" id="archive">
+        <div class="chapter-head"><span>02 / THE KHUSHI ARCHIVE</span><h2>Evidence that you actually grew up.</h2><p>Photos go here. We'll fill these with the real ones you send me.</p></div>
+        <div class="photo-grid">
+          <div class="photo-slot tone-a"><div>📸</div><span>YOUR PHOTO 01</span></div>
+          <div class="photo-slot tone-b tall"><div>🧸</div><span>YOUR PHOTO 02</span></div>
+          <div class="photo-slot tone-c"><div>✨</div><span>YOUR PHOTO 03</span></div>
+          <div class="photo-slot tone-d wide"><div>🎀</div><span>YOUR PHOTO 04</span></div>
+          <div class="photo-slot tone-e"><div>😂</div><span>YOUR PHOTO 05</span></div>
+          <div class="photo-slot tone-f"><div>🌼</div><span>YOUR PHOTO 06</span></div>
+        </div>
+        <p class="hand-note">Real photos will replace these placeholders. No fake memories. Promise.</p>
+        <button class="primary next" data-next="notes">Continue →</button>
+      </section>
+
+      <section class="chapter paper" id="notes">
+        <div class="chapter-head"><span>03 / THINGS I DON'T SAY ENOUGH</span><h2>Okay fine. You're pretty great.</h2><p>Don't get used to this level of honesty.</p></div>
+        <div class="note-stack">
+          <button class="note" data-note="I am genuinely proud of the person you've become.">tap me ✦</button>
+          <button class="note" data-note="We've grown up a lot, but somehow the sibling chaos survived.">tap me ✦</button>
+          <button class="note" data-note="I don't say it enough, but I'm really glad you're my sister.">tap me ✦</button>
+          <button class="note" data-note="And yes, even at 21, I reserve the right to call you buddhi. 🥀">tap me ✦</button>
+        </div>
+        <div class="note-reveal" id="noteReveal">Tap a card.</div>
+        <button class="primary next" data-next="game">Continue →</button>
+      </section>
+
+      <section class="chapter" id="game">
+        <div class="chapter-head"><span>04 / MEMORY MATCH</span><h2>Let's see if the birthday brain still works.</h2><p>Find all 5 matching pairs. No questions. No quiz. Just cards.</p></div>
+        <div class="game-status"><span id="moves">Moves: 0</span><span id="matches">Pairs: 0 / 5</span></div>
+        <div class="memory-grid" id="memoryGrid"></div>
+        <div class="game-result" id="gameResult"></div>
+        <button class="primary next hidden" id="gameNext" data-next="awards">Continue →</button>
+      </section>
+
+      <section class="chapter" id="awards">
+        <div class="chapter-head"><span>05 / THE SISTER AWARDS</span><h2>And the awards go to...</h2><p>A completely unbiased ceremony.</p></div>
+        <div class="award-list">
+          <div class="award"><span>🏆</span><div><small>Lifetime Achievement</small><h3>Professional Bhai Annoyer</h3></div></div>
+          <div class="award"><span>🏆</span><div><small>Outstanding Performance</small><h3>Most Dramatic Reaction</h3></div></div>
+          <div class="award"><span>🏆</span><div><small>Special Recognition</small><h3>Best “Bhaiiiii” Delivery</h3></div></div>
+          <div class="award winner"><span>🏆</span><div><small>The only award that actually matters</small><h3>BEST SISTER — KHUSHI</h3></div></div>
+        </div>
+        <button class="primary next" data-next="letter">Continue →</button>
+      </section>
+
+      <section class="chapter letter" id="letter">
+        <div class="letter-card">
+          <div class="stamp">21</div>
+          <span class="eyebrow">A note from your annoying brother</span>
+          <h2>Dear Khushi,</h2>
+          <p>I could have just sent you a birthday message.</p>
+          <p>But you're my sister, so obviously I had to overcomplicate it and make an entire website.</p>
+          <p>We've gone from the same school, to different schools, to different hostels, and now somehow we're here — both growing up and figuring life out.</p>
+          <p>I'm really proud of you. I hope 21 brings you a lot of happiness, good people, good memories, and plenty of reasons to laugh.</p>
+          <p>And no matter how old you get, I'll still be here to annoy you.</p>
+          <p class="signature">Happy Birthday, buddhi. 🥀<br><strong>— Bhai</strong></p>
+        </div>
+        <button class="primary next" data-next="birthday">One last thing →</button>
+      </section>
+
+      <section class="chapter birthday" id="birthday">
+        <div class="party-room" id="partyRoom">
+          <div class="room-decor">✦　🎈　✦　🎈　✦</div>
+          <div class="birthday-copy" id="birthdayCopy">
+            <span class="eyebrow">THE ACTUAL BIRTHDAY</span>
+            <h2>Wait...</h2><p>We haven't done the important part yet.</p>
+            <button class="primary" id="lightsBtn">Turn on the lights 💡</button>
+          </div>
+          <div class="cake-stage hidden" id="cakeStage">
+            <div class="poppers">🎉　🎊　🎉</div>
+            <div class="cake">
+              <div class="candles"><button class="flame" data-candle="1">🔥</button><button class="flame" data-candle="2">🔥</button><button class="flame" data-candle="3">🔥</button></div>
+              <div class="icing">✦ ✦ ✦</div><div class="cake-body">HAPPY 21</div><div class="plate"></div>
+            </div>
+            <div class="cake-prompt" id="cakePrompt"><h2>Happy Birthday Khushi 🎂</h2><p>Now blow out the candles.</p><button class="secondary" id="blowBtn">Blow / tap to blow 🕯️</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter wish" id="wish">
+        <div class="wish-card" id="wishCard">
+          <div class="moon">☾</div>
+          <span class="eyebrow">A LITTLE SECRET</span>
+          <h2>Close your eyes.</h2>
+          <p>Seriously. Close them and make a wish.</p>
+          <button class="primary" id="wishBtn">I've made my wish ✨</button>
+        </div>
+      </section>
+
+      <section class="chapter finale" id="finale">
+        <div class="finale-inner">
+          <div class="cake-cut" id="cakeCut"><div class="big-cake">🎂</div><div class="knife">🔪</div></div>
+          <span class="eyebrow">THE FINAL REVEAL</span>
+          <h1>HAPPY BIRTHDAY<br><em>KHUSHI</em> 🎂</h1>
+          <p>Officially 21. Unofficially still my bhondhu sister.</p>
+          <div class="final-line">Buddhi hori bilkul hi 🥀</div>
+          <button class="secondary" id="replay">Replay the chaos ↻</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <audio id="birthdayMusic" loop preload="none" src="https://www.orangefreesounds.com/wp-content/uploads/2016/08/Happy-birthday-instrumental.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
